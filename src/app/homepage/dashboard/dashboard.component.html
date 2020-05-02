@@ -1,0 +1,33 @@
+<div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table" *ngIf="covidStats && covidStats.length">
+              <thead>
+                <tr>                 
+                  <th>Reported</th>
+                  <th>Active</th>
+                  <th>Deaths</th>                 
+                  <th>Recovered</th>
+                  <th>State</th>                
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let stateStats of covidStats">                  
+                  <td>{{ stateStats.confirmed }}</td>
+                  <td>{{ stateStats.active }}</td>
+                  <td>{{ stateStats.deaths }}</td>
+                  <td>{{ stateStats.recovered }}</td>  
+                  <td>
+                      <button mat-flat-button color="primary" [routerLink]="['statedetail', stateStats.statecode]">
+                      {{ stateStats.state }}
+                      </button>
+                  <td>                                       
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+</div>
+
+<router-outlet></router-outlet>
+		

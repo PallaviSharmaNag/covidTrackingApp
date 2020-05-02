@@ -1,0 +1,31 @@
+<button id="backButton" mat-flat-button color="primary" (click)="goBack()">
+    Back
+</button>
+<div class="card">
+    <div class="card-body">        
+      <div class="table-responsive">
+        <table class="table" *ngIf="districtDetails && districtDetails.length">
+          <thead>
+            <tr> 
+              <th>District</th>                  
+              <th>Reported</th>
+              <th>Active</th>
+              <th>Deceased</th>                 
+              <th>Recovered</th>
+              <th>Notes</th>                
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let districtDetail of districtDetails">
+              <td>{{ districtDetail.key }}</td>                 
+              <td>{{ districtDetail.districtDetail.confirmed }}</td>
+              <td>{{ districtDetail.districtDetail.active }}</td>
+              <td>{{ districtDetail.districtDetail.deceased }}</td>
+              <td>{{ districtDetail.districtDetail.recovered }}</td>
+              <td>{{ districtDetail.districtDetail.notes }}</td>                                      
+            </tr>
+          </tbody>
+        </table>       
+      </div>
+    </div>
+</div>

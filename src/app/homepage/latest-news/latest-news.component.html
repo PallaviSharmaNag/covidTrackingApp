@@ -1,0 +1,28 @@
+<div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table" *ngIf="news && news.length">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Summary</th>
+                  <th>Full News</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let latestnews of news">
+                  <td>{{ latestnews.title }}</td>
+                  <td>{{ latestnews.description }}</td>
+                  <td>{{ latestnews.summary }}</td>
+                  <td>{{ latestnews.fullnews }}</td>                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <div class="table-data">
+        <router-outlet></router-outlet>
+      </div>
