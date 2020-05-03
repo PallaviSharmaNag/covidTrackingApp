@@ -3,8 +3,8 @@
      <h1>{{pageTitle}}</h1>
      <span class="fill-space"></span>
      <span>
-        <button id="login" *ngIf="!isLoggedIn" type="button" mat-button color="accent" (click)="login()" ><mat-icon>account_circle</mat-icon> Login </button>
-        <button id="logout" *ngIf="isLoggedIn" type="button" mat-button color="accent" (click)="logout()" ><mat-icon>account_circle</mat-icon>   {{username | uppercase}}</button> 
+        <button id="login" *ngIf="!getisLoggedIn()" type="button" mat-button color="accent" (click)="login()" ><mat-icon>account_circle</mat-icon> Login </button>
+        <button id="logout" *ngIf="getisLoggedIn()" type="button" mat-button color="accent" (click)="logout()" ><mat-icon>account_circle</mat-icon>   {{username | uppercase}}</button> 
      </span>    
 </mat-toolbar-row>
 </mat-toolbar>

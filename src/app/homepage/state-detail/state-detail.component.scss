@@ -38,3 +38,12 @@ mat-card-content{
     margin-right:100px;
     margin-top: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    .card {
+      margin: auto;
+    }
+    #backButton{
+        margin:auto;
+    }
+  }

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './core/approuting/app-routing.module'
+import { AppRoutingModule, routes } from './core/approuting/app-routing.module'
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { CovidStatsService } from 'src/app/core/services/covid-stats.service';
 import { InMemoryDataService } from 'src/app/core/services/in-memory-data.service';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { InMemoryDataService } from 'src/app/core/services/in-memory-data.servic
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
+    RouterModule.forRoot(routes, { useHash: true }),
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false, passThruUnknownUrl: true }
     )

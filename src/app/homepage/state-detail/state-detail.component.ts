@@ -43,6 +43,9 @@ export class StateDetailComponent implements OnInit {
       let districtDetail: IDistrictData = {};
       districtDetail.key = key;
       districtDetail["districtDetail"] = this.stateDetail.districtData[key];
+      if(districtDetail.districtDetail.notes==''){
+        districtDetail.districtDetail.notes = '-'
+      }
       this.districtDetails.push(districtDetail);
     }
   }
