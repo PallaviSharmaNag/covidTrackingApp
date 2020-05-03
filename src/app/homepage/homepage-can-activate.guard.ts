@@ -10,7 +10,7 @@ export class HomepageCanActivateGuard implements CanActivate {
   canActivate(): boolean {
     if (localStorage.getItem('TOKEN') === null || localStorage.getItem('TOKEN') === undefined) {
       this.router.navigate(['/login']);
-      this.toastrService.warning('Please login to continue!', 'User Management Portal');
+      this.toastrService.warning('Please login to continue!', 'Covid Tracking App');
       return false;
     }
     return true;

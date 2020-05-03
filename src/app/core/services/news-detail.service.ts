@@ -32,8 +32,7 @@ export class NewsDetailService {
     return null;
   }
 
-  deleteNews(id: number) {
-    
+  deleteNews(id: number) {    
   }
 
   private handleError(error: HttpErrorResponse) {

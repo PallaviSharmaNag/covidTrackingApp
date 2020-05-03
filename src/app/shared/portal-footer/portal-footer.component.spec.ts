@@ -26,8 +26,8 @@ describe('PortalFooterComponent', () => {
     expect(component).toBeTruthy();
   });
   
-  it('should contain pinki in the footer toolbar', () => {
-    const footerText = "Pinki";
+  it('should contain Pallavi in the footer toolbar', () => {
+    const footerText = "Pallavi";
     const component = fixture.debugElement.componentInstance;
     expect(component.name).toContain(footerText);
   });

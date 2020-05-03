@@ -14,8 +14,7 @@ export class LatestNewsComponent implements OnInit {
   constructor(private newsDetailService: NewsDetailService) { }
 
   ngOnInit(): void {
-    this.listAllNews();    
-   
+    this.listAllNews();  
   }
 
   listAllNews() {
