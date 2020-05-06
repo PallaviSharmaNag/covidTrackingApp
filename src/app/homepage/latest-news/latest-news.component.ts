@@ -17,10 +17,12 @@ export class LatestNewsComponent implements OnInit {
     this.listAllNews();  
   }
 
-  listAllNews() {
+  listAllNews(): INews[] {
     this.newsDetailService.getNewsDetails().subscribe(data => {
       this.news = data;
+      return data;
     });
+    return this.news;
   }
 
 }

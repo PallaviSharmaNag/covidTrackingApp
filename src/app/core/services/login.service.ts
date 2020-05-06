@@ -40,7 +40,8 @@ export class LoginService {
   validateUser(user: IUser): boolean {
     let validUser = false;
     if (this.loginData.findIndex(usr => user.username.toLowerCase() === usr.username.toLowerCase()) > -1) {
-      validUser = true;
+      if (this.loginData.findIndex(usr => user.password.toLowerCase() === usr.password.toLowerCase()) > -1)
+        validUser = true;
     }
     return validUser;
   }
